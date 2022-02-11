@@ -13,12 +13,12 @@ public class ProductRepo {
         return products;
     }
 
-    public Product get(int id){
-        for (Product product : products) {
-            if (product.getId() == id) {
-                return product;
+    public Product get(int id) throws Exception {
+            for (Product product : products) {
+                if (product.getId() == id) {
+                    return product;
+                }
             }
-        }
-        return null;
+            throw new Exception("Element is not in List!");
     }
 }

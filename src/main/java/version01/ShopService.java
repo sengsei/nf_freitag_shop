@@ -11,11 +11,24 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
 
-    public Product getProduct(int id){
+    public Product getProduct(int id) throws Exception {
         return productRepo.get(id);
     }
 
     public List<Product> listProducts(){
         return productRepo.list();
     }
+
+    public void addOrder(Order order){
+        orderRepo.add(order);
+    }
+
+    public Order getOrder(int id){
+        return orderRepo.get(id);
+    }
+
+    public List<Order> listOrders(){
+        return orderRepo.list();
+    }
+
 }
