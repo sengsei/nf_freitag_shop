@@ -12,7 +12,7 @@ class ShopServiceTest {
 
     @Test
     void shouldReturnExceptionProductListisEmpty() {
-        Product p1 = new Product(1234, "BlackHat");
+        Product p1 = new ProductHat(1234, "BlackHat");
         List<Product> productList = new ArrayList<>();
         List<Order> orders = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo(productList);
