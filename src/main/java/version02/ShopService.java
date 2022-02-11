@@ -1,6 +1,7 @@
 package version02;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ShopService {
     private final ProductRepo productRepo;
@@ -11,7 +12,7 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
 
-    public Product getProduct(int id) throws Exception {
+    public Optional<Product> getProduct(int id)  {
         return productRepo.get(id);
     }
 
@@ -23,7 +24,7 @@ public class ShopService {
         orderRepo.add(order);
     }
 
-    public Order getOrder(int id){
+    public Optional<Order> getOrder(int id){
         return orderRepo.get(id);
     }
 

@@ -1,6 +1,7 @@
 package version02;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ProductRepo {
     private final List<Product>products;
@@ -13,12 +14,12 @@ public class ProductRepo {
         return products;
     }
 
-    public Product get(int id) throws Exception {
+    public Optional<Product> get(int id)  {
             for (Product product : products) {
                 if (product.getId() == id) {
-                    return product;
+                    return Optional.of(product);
                 }
             }
-            throw new Exception("Element is not in List!");
+           return Optional.empty();
     }
 }

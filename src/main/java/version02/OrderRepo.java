@@ -1,6 +1,7 @@
 package version02;
 
 import java.util.List;
+import java.util.Optional;
 
 public class OrderRepo {
     private final List<Order>orders;
@@ -13,13 +14,13 @@ public class OrderRepo {
         return orders;
     }
 
-    public Order get(int id){
+    public Optional<Order> get(int id){
         for (Order order : orders) {
             if (order.getId() == id) {
-                return order;
+                return Optional.of(order);
             }
         }
-        return null;
+        return Optional.empty();
     }
 
     public void add(Order order){
