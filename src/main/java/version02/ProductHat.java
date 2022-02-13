@@ -1,8 +1,8 @@
 package version02;
 
 public class ProductHat implements Product {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     public ProductHat(int id, String name) {
         this.id = id;
@@ -19,4 +19,11 @@ public class ProductHat implements Product {
         return name;
     }
 
+    @Override
+    public String toString() {
+        return "ProductHat{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
