@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShopServiceTest {
 
     @Test
-    void shouldReturnExceptionProductListisEmpty() {
+    void shouldReturnExceptionProductListIsEmpty() {
         Product p1 = new ProductHat(1234, "BlackHat");
         List<Product> productList = new ArrayList<>();
         List<Order> orders = new ArrayList<>();

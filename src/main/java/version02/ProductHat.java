@@ -15,17 +15,8 @@ public class ProductHat implements Product {
     }
 
     @Override
-    public void setId(int id) {
-
-    }
-
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
 }
