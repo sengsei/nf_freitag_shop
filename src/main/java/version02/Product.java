@@ -1,7 +1,7 @@
 package version02;
 
 public interface Product {
-   int getId();
+   String getId();
    String getName();
    String toString();
 }

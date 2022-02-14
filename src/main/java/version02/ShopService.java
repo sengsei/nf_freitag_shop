@@ -12,7 +12,7 @@ public class ShopService {
         this.orderRepo = orderRepo;
     }
 
-    public Optional<Product> getProduct(int id)  {
+    public Optional<Product> getProduct(String id)  {
         return productRepo.get(id);
     }
 
@@ -24,7 +24,7 @@ public class ShopService {
         orderRepo.add(order);
     }
 
-    public Optional<Order> getOrder(int id){
+    public Optional<Order> getOrder(String id){
         return orderRepo.get(id);
     }
 

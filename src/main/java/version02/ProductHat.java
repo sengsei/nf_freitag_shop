@@ -1,16 +1,18 @@
 package version02;
 
+import java.util.UUID;
+
 public class ProductHat implements Product {
-    private final int id;
+    private final String id;
     private final String name;
 
-    public ProductHat(int id, String name) {
-        this.id = id;
+    public ProductHat(String name) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
     }
 
     @Override
-    public int getId() {
+    public String getId() {
         return id;
     }
 

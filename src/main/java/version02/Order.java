@@ -1,21 +1,23 @@
 package version02;
 
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 public class Order {
-    private final int id;
-    private List<Product> products;
+    private final String id;
+    private Map<String, Product> products;
 
-    public Order(int id, List<Product> products) {
-        this.id = id;
+    public Order(Map<String, Product> products) {
+        this.id = UUID.randomUUID().toString();
         this.products = products;
     }
 
-    public Order(int id) {
+    public Order(String id) {
         this.id = id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

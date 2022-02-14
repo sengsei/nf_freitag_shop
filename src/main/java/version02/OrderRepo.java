@@ -1,29 +1,29 @@
 package version02;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
-public class OrderRepo {
-    private final List<Order>orders;
 
-    public OrderRepo(List<Order> orders) {
+public class OrderRepo {
+    private final Map<String, Order> orders;
+
+    public OrderRepo(Map<String, Order> orders) {
         this.orders = orders;
     }
 
     public List<Order> list(){
-        return orders;
+        return orders.values().stream().toList();
     }
 
-    public Optional<Order> get(int id){
-        for (Order order : orders) {
-            if (order.getId() == id) {
-                return Optional.of(order);
-            }
-        }
-        return Optional.empty();
+    public Optional<Order> get(String id){
+        return Optional.ofNullable(orders.get(id));
     }
 
     public void add(Order order){
-        orders.add(order);
+
+        orders.put(order.getId(), order);
     }
 }
+
+
