@@ -13,13 +13,9 @@ public class OrderRepo {
         return orders;
     }
 
-    public Order get(int id){
-        for (Order order : orders) {
-            if (order.getId() == id) {
-                return order;
-            }
-        }
-        return null;
+    public Order get(int id) {
+        return orders.stream().filter(o -> o.getId() == id)
+                .findFirst().orElse(null);
     }
 
     public void add(Order order){

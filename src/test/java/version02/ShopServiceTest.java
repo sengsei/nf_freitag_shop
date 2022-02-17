@@ -82,9 +82,4 @@ class ShopServiceTest {
         assertTrue(result.contains(o1));
     }
 
-
-
-
-
-
 }
